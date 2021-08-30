@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: "Inconsolata";
+  box-sizing: border-box;
+}
+
+.daynight {
+  background-color: #b29ddb;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+input {
+  border: none;
+  border-radius: 20%;
+  margin: 1%;
+  background-color: #826fa9;
+  color: white;
+  font-family: "Inconsolata";
+  padding: 1%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #b29ddb;
+}
+
+.navbar__logo {
+  font-size: 24px;
+}
+.navbar__logo i {
+  color: #826fa9;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.navbar__menu li {
+  padding: 8px 12px;
+}
+.navbar__menu li:hover {
+  background-color: orange;
+  border-radius: 4px;
+}
+
+.navbar__icons {
+  list-style: none;
+  color: white;
+  display: flex;
+  padding-left: 0;
+}
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+.navbar__toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #826fa9;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 8px 12px;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar__toggleBtn {
+    display: block;
+  }
+
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+}
+
+.href {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <script>
+            function two(){
+                document.write('<li>3-1</li>');
+                document.write('<li>2-2</li>');
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>2-1</li>');
+            two();
+
+            function sum(left, right) {
+                document.write(left+right);
+            }
+            sum(3, 4);
+
+         //객체 만들기
+         var coworkers = {
+                "programmer":"eunseo",
+                "designer":"leexche"
+            };
+
+            document.write("programmer :" + coworkers.programmer+ "<br>");
+            document.write("designer : " + coworkers.designer + "<br>");
+            
+            coworkers.bookkeeper = "duru";
+            coworkers["data scientists"] = "taeho";
+            document.write("data scientists : " + coworkers["data scientists"] + "<br>");
+
+            for(var key in coworkers) {
+                document.write(key + ":" + coworkers[key] + "<br>");
+            }
+
+            coworkers.eunSeo = function(){
+                for(var key in coworkers) {
+                document.write(key + ":" + this[key] + "<br>");
+            }
+            }
+            coworkers.eunSeo();
+        </script>
+    </ul>
+</body>
+</html>

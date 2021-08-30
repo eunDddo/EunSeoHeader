@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ddoheaderstyle.css">
+    <title>DDo header</title>
+    <script src="https://kit.fontawesome.com/2e89b343cb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet">
+    <script src="ddoheaderjava.js" defer> </script>
+
+
+    <script>
+        var Body = {
+            BodySetColor: function (color) {
+                document.querySelector('body').style.color=color; 
+        },
+            BodyBackSetColor: function(color) {
+                document.querySelector('body').style.backgroundColor=color;
+            }
+
+        }
+
+        var Links = {
+            linkssetColor: function(color) {var alist = document.querySelectorAll('.href a');
+            var i=0;
+            while(i<alist.length){
+            console.log(alist[i]);
+            alist[i].style.color = color;
+            i++;}
+
+        }
+        /*function BodyBackSetColor(color) {
+            document.querySelector('body').style.backgroundColor=color;
+        }
+        function BodySetColor(color) {
+            document.querySelector('body').style.color=color; 
+        }*/
+
+        /*function LinksSetColor(color) {
+            var alist = document.querySelectorAll('.href a');
+            var i=0;
+            while(i<alist.length){
+            console.log(alist[i]);
+            alist[i].style.color = color;
+            i++;
+        }  */
+        }
+        function nightDayHandler(self){
+        var target = document.querySelector('body')
+        if (self.value === 'night') {
+            Body.BodyBackSetColor('black');
+            Body.BodySetColor('white');
+        self.value = 'day';
+
+        Links.linkssetColor('powderblue');
+        
+    }
+        else {
+            Body.BodyBackSetColor('white');
+            Body.BodySetColor('black');
+        self.value = 'night';
+
+        Links.linkssetColor('blue');
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="daynight">
+
+
+        
+   
+        <input id="night_day" type="button" value="night" onclick="
+       nightDayHandler(this)"
+        >
+    </nav>
+    
+    
+        <nav class="navbar">
+    
+    
+    
+            <div class="navbar__logo">
+                <i class="fas fa-heart"></i>
+                <a href="http://127.0.0.1:5500/ddoheader.html">DDo</a>
+            </div>
+    
+           
+            <ul class="navbar__menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Wedding</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Bookings</a></li>
+            </ul>
+    
+            <ul class="navbar__icons">
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-facebook-square"></i></li>
+    
+            </ul>
+    
+            <a href="#" class="navbar__toggleBtn">
+                <i class="fas fa-bars"></i>
+            
+            </a>
+    
+        </nav>
+    
+        <div class="href">
+            <ol>
+                <li> <a href="http://www.google.com">Google</a>    </li>
+                <li><a href="http://www.naver.com">Naver</a></li>
+            </ol>
+           
+        </div>
+
+
+
+
+
+
+
+
+</body>
+</html>
